@@ -38,7 +38,7 @@ public class ViolationService {
 
     private void emailSend(Violation violation, String emailAddress) {
 
-        String from = "traffic.authorities@gmail.com";
+        String from = "********uthorities@gmail.com";
         String host = "smtp.gmail.com";
         Properties properties = System.getProperties();
         properties.put("mail.smtp.host", host);
@@ -49,7 +49,7 @@ public class ViolationService {
         Session session = Session.getInstance(properties, new javax.mail.Authenticator() {
 
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication(from, "Team@1234");
+                return new PasswordAuthentication(from, "******");
             }
         });
         session.setDebug(true);
